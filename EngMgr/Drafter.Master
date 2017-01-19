@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Drafter.master.cs" Inherits="EngMgr.Drafter1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="style/main.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 137px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       <div id="MainData">
+        <div id="Header"></div>
+        <div id="Image" class="auto-style2">
+            <img src="Image/mtclogomod.png" class="auto-style1" /></div>
+        <div id="Login"></div>
+        <div id="Menu" class="auto-style3">
+            &nbsp;&nbsp;
+            <asp:Button ID="HomeButton" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="100%" PostBackUrl="~/Default.aspx" Text="Home" Width="150px" />
+&nbsp;&nbsp;
+            <asp:Button ID="HomeButton0" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="100%" PostBackUrl="~/AdminDefault.aspx" Text="Admin" Width="150px" />
+&nbsp;&nbsp;
+            <asp:Button ID="HomeButton1" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="100%" PostBackUrl="~/EngineerDefault.aspx" Text="Engineer" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton2" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="100%" PostBackUrl="~/DrafterDefault.aspx" Text="Drafter" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton3" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="100%" PostBackUrl="~/DirectorDefault.aspx" Text="Director" Width="150px" />
+        </div>
+           <div id="DrafterSubContent" runat="server">
+
+               <br />
+            <asp:Button ID="DrafterMechanicalBtn" runat="server" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="Mechanical" PostBackUrl="~/DrafterMechanical.aspx" Height="30px" Width="200px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="DrafterControlBtn" runat="server" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="Control" PostBackUrl="~/DrafterControl.aspx" Height="30px" Width="200px" />
+
+           &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="SearchEngineBtn" runat="server" BackColor="#CCCCCC" BorderColor="Silver" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" Text="Search Engine" PostBackUrl="~/SearchEngineDefault.aspx" Height="30px" Width="200px" />
+
+           </div>
+        <div id="Content"> 
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> Drafter Content Place Holder 1
+        </asp:ContentPlaceHolder>
+            <div id="DrafterContentLeft">
+                <asp:Button ID="BillWarrenBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="B. Warren" Width="125px" PostBackUrl="~/DrafterBW.aspx" />
+                <br />
+                <asp:Button ID="JoeThomasBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="J. Thomas" Width="125px" PostBackUrl="~/DrafterJT.aspx" />
+                <br />
+                <asp:Button ID="LillianWitherowBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="L. Witherow" Width="125px" PostBackUrl="~/DrafterLW.aspx" />
+                <br />
+                <asp:Button ID="HectorChaviraBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="H. Chavira" Width="125px" PostBackUrl="~/DrafterHC.aspx" />
+                <br />
+                <asp:Button ID="RandyCannonBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="R. Cannon" Width="125px" PostBackUrl="~/DrafterRC.aspx" />
+                <br />
+                <asp:Button ID="RickWilsonBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="R. Wilson" Width="125px" PostBackUrl="~/DrafterRW.aspx" />
+                <br />
+                <asp:Button ID="JoeRelaBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="J. Rela" Width="125px" PostBackUrl="~/DrafterJR.aspx" />
+                <asp:Button ID="WayneWillisBtn" runat="server" BackColor="#66CCFF" BorderStyle="None" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Text="W. Willis" Width="125px" PostBackUrl="~/DrafterWW.aspx" />
+                <br />
+                </div>
+            <div id="DrafterContentRight">
+                <br />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    Drafter
+       Content Place Holder 3 </asp:ContentPlaceHolder></div>      
+    </div>
+    </div>
+        </div>
+    </form>
+</body>
+</html>

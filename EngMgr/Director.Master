@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Director.master.cs" Inherits="EngMgr.Director" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="style/main.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 139px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="Header"></div>
+        <div id="Image" class="auto-style2">
+            <img src="Image/mtclogomod.png" class="auto-style1" /></div>
+        <div id="Login"></div>
+        <div id="Menu" class="auto-style3">
+            &nbsp;&nbsp;
+            <asp:Button ID="HomeButton" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/Default.aspx" Text="Home" Width="150px" />
+&nbsp;&nbsp;
+            <asp:Button ID="HomeButton0" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/AdminDefault.aspx" Text="Admin" Width="150px" />
+&nbsp;&nbsp;
+            <asp:Button ID="HomeButton1" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/EngineerDefault.aspx" Text="Engineer" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton2" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DrafterDefault.aspx" Text="Drafter" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton3" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DirectorDefault.aspx" Text="Director" Width="150px" />
+        </div>
+        <br />
+    <asp:Button ID="WTRBtn" runat="server" Text="ECR Reports" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Height="30px" Width="300px" TabIndex="5" PostBackUrl="~/ECRDefault.aspx" />
+        <br />
+         <div id="Content"> 
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="SubContent">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"> 
+            <p>&nbsp;</p>
+        </asp:ContentPlaceHolder>
+            </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Engineer.master.cs" Inherits="EngMgr.Engineer" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+<link href="style/main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 474px;
+            height: 140px;
+        }
+        .auto-style2 {
+            width: 14%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Header">
+
+        </div>
+        <div id="Image">
+            <img alt="MTCLogo" class="auto-style1" src="Image/mtclogomod.png" />
+
+        </div>
+        <div id="Login">
+
+        </div>
+        <div id="Menu">
+            <asp:Button ID="HomeButton" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/Default.aspx" Text="Home" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton0" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/AdminDefault.aspx" Text="Admin" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton1" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/EngineerDefault.aspx" Text="Engineer" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton2" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DrafterDefault.aspx" Text="Drafter" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton3" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DirectorDefault.aspx" Text="Director" Width="150px" />
+            <br />
+        </div>
+        <div id="SubMenu">
+            <br />
+            <asp:Button ID="MechanicalButton" runat="server" BackColor="#CCCCCC" BorderColor="Silver" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" Text="Mechanical" PostBackUrl="~/EngineerMechanical.aspx" Height="30px" Width="200px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="ElecrticalButton" runat="server" BackColor="#CCCCCC" BorderColor="Silver" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" Text="Controls" PostBackUrl="~/EngineerControl.aspx" Height="30px" Width="200px" />
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="SearchEngineBtn" runat="server" BackColor="#CCCCCC" BorderColor="Silver" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" Text="Search Engine" PostBackUrl="~/SearchEngineDefault.aspx" Height="30px" Width="200px" />
+        </div>
+        <div id="EngineerSideBarRight">
+ <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>   
+            </div>
+        
+        <div id="EngineerSideBarLeft" class="auto-style2">
+            <br />
+            <asp:HyperLink ID="Reggie" runat="server" NavigateUrl="~/EngineerRA.aspx" Font-Names="Tahoma" Font-Bold="True" Font-Size="14pt">Reg</asp:HyperLink>
+            <br />
+            <br />
+           <asp:HyperLink ID="Rodney" runat="server" NavigateUrl="~/EngineerRG.aspx" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt">Rodney</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="Trae" runat="server" NavigateUrl="~/EngineerTL.aspx" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt">Trae</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="Bob" runat="server" NavigateUrl="~/EngineerBR.aspx" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt">Bob</asp:HyperLink>
+            <br />
+        </div>
+        <div id="footer">
+        </div>
+    </form>
+    
+</body>
+</html>

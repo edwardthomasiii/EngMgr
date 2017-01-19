@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ECR.master.cs" Inherits="EngMgr.ECR" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="style/main.css" rel="stylesheet" />
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 139px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" runat="server">
+     <div id="Header"></div>
+        <div id="Image" class="auto-style2">
+            <img src="Image/mtclogomod.png" class="auto-style1" /></div>
+        <div id="Login"></div>
+        <div id="Menu" class="auto-style3">
+            &nbsp;&nbsp;
+            <asp:Button ID="HomeButton" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/Default.aspx" Text="Home" Width="150px" />
+&nbsp;&nbsp;
+            <asp:Button ID="HomeButton0" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/AdminDefault.aspx" Text="Admin" Width="150px" />
+&nbsp;&nbsp;
+            <asp:Button ID="HomeButton1" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/EngineerDefault.aspx" Text="Engineer" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton2" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DrafterDefault.aspx" Text="Drafter" Width="150px" />
+&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="HomeButton3" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DirectorDefault.aspx" Text="Director" Width="150px" />
+        </div>
+      
+         <div id="Content">  
+     <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        &nbsp;&nbsp;&nbsp;
+        </asp:ContentPlaceHolder>
+         &nbsp;</div>
+    </form>
+</body>
+</html>
+

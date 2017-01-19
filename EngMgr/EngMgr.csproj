@@ -43,11 +43,48 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\l.thomas\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.TraceListener, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.TraceListener.2.1.0\lib\net45\Microsoft.ApplicationInsights.TraceListener.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,31 +103,940 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminCompositeStatusReport.aspx" />
+    <Content Include="AdminDefault.aspx" />
+    <Content Include="ECRDefault.aspx" />
+    <Content Include="SearchEngineAfter2015City.aspx" />
+    <Content Include="SearchEngineAfter2015MTC.aspx" />
+    <Content Include="SearchEngineAfter2015Equipment.aspx" />
+    <Content Include="SearchEngineBefore2015MTC.aspx" />
+    <Content Include="SearchEngineBefore2015Company.aspx" />
+    <Content Include="SearchEngineBefore2015Equipment.aspx" />
+    <Content Include="SearchEngineAfter2015Company.aspx" />
+    <Content Include="SearchEngineBefore2015City.aspx">
+      <BrowseToURL>~/citywade.aspx</BrowseToURL>
+    </Content>
+    <Content Include="DirectorAdjustLeadTimes.aspx">
+      <BrowseToURL>~/DirectorAdjustLeadTimes.aspx</BrowseToURL>
+    </Content>
+    <Content Include="DirectorDefault.aspx" />
+    <Content Include="DirectorPersonnelReport.aspx" />
+    <Content Include="DrafterBW.aspx" />
+    <Content Include="DrafterControl.aspx" />
+    <Content Include="DrafterDefault.aspx" />
+    <Content Include="DrafterHC.aspx" />
+    <Content Include="DrafterJR.aspx" />
+    <Content Include="DrafterJT.aspx" />
+    <Content Include="DrafterLW.aspx" />
+    <Content Include="DrafterMechanical.aspx" />
+    <Content Include="DrafterRC.aspx" />
+    <Content Include="DrafterRW.aspx" />
+    <Content Include="DrafterWW.aspx" />
+    <Content Include="EngineerBR.aspx" />
+    <Content Include="EngineerControl.aspx" />
+    <Content Include="EngineerDefault.aspx" />
+    <Content Include="EngineerMechanical.aspx" />
+    <Content Include="EngineerRA.aspx" />
+    <Content Include="EngineerRG.aspx" />
+    <Content Include="EngineerTL.aspx" />
+    <Content Include="MasterItem.aspx" />
     <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manager.Master" />
+    <Content Include="main.master" />
+    <Content Include="Drafter.Master" />
+    <Content Include="Director.Master" />
+    <Content Include="JobTrackerDataSet.xsc">
+      <DependentUpon>JobTrackerDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Engineer.Master" />
+    <Content Include="ITE.xsc">
+      <DependentUpon>ITE.xsd</DependentUpon>
+    </Content>
+    <Content Include="HC.xsc">
+      <DependentUpon>HC.xsd</DependentUpon>
+    </Content>
+    <Content Include="BR.xsc">
+      <DependentUpon>BR.xsd</DependentUpon>
+    </Content>
+    <Content Include="AJ.xsc">
+      <DependentUpon>AJ.xsd</DependentUpon>
+    </Content>
+    <None Include="AJ.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AJ.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="AJ.xss">
+      <DependentUpon>AJ.xsd</DependentUpon>
+    </Content>
+    <Content Include="AJAssignments.xsc">
+      <DependentUpon>AJAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="AJAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AJAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="AJAssignments.xss">
+      <DependentUpon>AJAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="BR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="BR.xss">
+      <DependentUpon>BR.xsd</DependentUpon>
+    </Content>
+    <Content Include="COSR.xsc">
+      <DependentUpon>COSR.xsd</DependentUpon>
+    </Content>
+    <Content Include="BWAssignments.xsc">
+      <DependentUpon>BWAssignments.xsd</DependentUpon>
+    </Content>
+    <Content Include="BRAssignments.xsc">
+      <DependentUpon>BRAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="BRAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BRAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="BRAssignments.xss">
+      <DependentUpon>BRAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="BWAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BWAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="BWAssignments.xss">
+      <DependentUpon>BWAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="COSR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COSR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="COSR.xss">
+      <DependentUpon>COSR.xsd</DependentUpon>
+    </Content>
+    <Content Include="GADO.xsc">
+      <DependentUpon>GADO.xsd</DependentUpon>
+    </Content>
+    <Content Include="ECR.Master" />
+    <None Include="GADO.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GADO.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GADO.xss">
+      <DependentUpon>GADO.xsd</DependentUpon>
+    </Content>
+    <None Include="HC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="HC.xss">
+      <DependentUpon>HC.xsd</DependentUpon>
+    </Content>
+    <Content Include="HCAssignments.xsc">
+      <DependentUpon>HCAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="HCAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="HCAssignments.xss">
+      <DependentUpon>HCAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="ITE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ITE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ITE.xss">
+      <DependentUpon>ITE.xsd</DependentUpon>
+    </Content>
+    <None Include="JobTrackerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JobTrackerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="JobTrackerDataSet.xss">
+      <DependentUpon>JobTrackerDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="MasterDataSet.xsc">
+      <DependentUpon>MasterDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="JT.xsc">
+      <DependentUpon>JT.xsd</DependentUpon>
+    </Content>
+    <Content Include="JR.xsc">
+      <DependentUpon>JR.xsd</DependentUpon>
+    </Content>
+    <None Include="JR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="JR.xss">
+      <DependentUpon>JR.xsd</DependentUpon>
+    </Content>
+    <Content Include="JRAssignments.xsc">
+      <DependentUpon>JRAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="JRAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JRAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="JRAssignments.xss">
+      <DependentUpon>JRAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="JT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="JT.xss">
+      <DependentUpon>JT.xsd</DependentUpon>
+    </Content>
+    <Content Include="LW.xsc">
+      <DependentUpon>LW.xsd</DependentUpon>
+    </Content>
+    <Content Include="JTAssignments.xsc">
+      <DependentUpon>JTAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="JTAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JTAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="JTAssignments.xss">
+      <DependentUpon>JTAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="LW.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="LW.xss">
+      <DependentUpon>LW.xsd</DependentUpon>
+    </Content>
+    <Content Include="LWAssignments.xsc">
+      <DependentUpon>LWAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="LWAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LWAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="LWAssignments.xss">
+      <DependentUpon>LWAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="MasterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MasterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="MasterDataSet.xss">
+      <DependentUpon>MasterDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="RW.xsc">
+      <DependentUpon>RW.xsd</DependentUpon>
+    </Content>
+    <Content Include="RC.xsc">
+      <DependentUpon>RC.xsd</DependentUpon>
+    </Content>
+    <Content Include="RA.xsc">
+      <DependentUpon>RA.xsd</DependentUpon>
+    </Content>
+    <None Include="RA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RA.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RA.xss">
+      <DependentUpon>RA.xsd</DependentUpon>
+    </Content>
+    <Content Include="RAAssignments.xsc">
+      <DependentUpon>RAAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RAAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RAAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RAAssignments.xss">
+      <DependentUpon>RAAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RC.xss">
+      <DependentUpon>RC.xsd</DependentUpon>
+    </Content>
+    <Content Include="RG.xsc">
+      <DependentUpon>RG.xsd</DependentUpon>
+    </Content>
+    <Content Include="RCAssignments.xsc">
+      <DependentUpon>RCAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RCAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RCAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RCAssignments.xss">
+      <DependentUpon>RCAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RG.xss">
+      <DependentUpon>RG.xsd</DependentUpon>
+    </Content>
+    <Content Include="RGAssignments.xsc">
+      <DependentUpon>RGAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RGAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RGAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RGAssignments.xss">
+      <DependentUpon>RGAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RW.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RW.xss">
+      <DependentUpon>RW.xsd</DependentUpon>
+    </Content>
+    <Content Include="SearchEngineDefault.aspx" />
+    <Content Include="SearchEngineAfter2015SN.aspx" />
+    <Content Include="SearchEngineBefore2015SN.aspx" />
+    <Content Include="TL.xsc">
+      <DependentUpon>TL.xsd</DependentUpon>
+    </Content>
+    <Content Include="SearchEngine.Master" />
+    <Content Include="RWAssignments.xsc">
+      <DependentUpon>RWAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="RWAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RWAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RWAssignments.xss">
+      <DependentUpon>RWAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="TL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="TL.xss">
+      <DependentUpon>TL.xsd</DependentUpon>
+    </Content>
+    <Content Include="UA.xsc">
+      <DependentUpon>UA.xsd</DependentUpon>
+    </Content>
+    <Content Include="TLAssignments.xsc">
+      <DependentUpon>TLAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="TLAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="TLAssignments.xss">
+      <DependentUpon>TLAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="UA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UA.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="UA.xss">
+      <DependentUpon>UA.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WW.xsc">
+      <DependentUpon>WW.xsd</DependentUpon>
+    </Content>
+    <Content Include="WTR.xsc">
+      <DependentUpon>WTR.xsd</DependentUpon>
+    </Content>
+    <None Include="WTR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WTR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="WTR.xss">
+      <DependentUpon>WTR.xsd</DependentUpon>
+    </Content>
+    <None Include="WW.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="WW.xss">
+      <DependentUpon>WW.xsd</DependentUpon>
+    </Content>
+    <Content Include="WWAssignments.xsc">
+      <DependentUpon>WWAssignments.xsd</DependentUpon>
+    </Content>
+    <None Include="WWAssignments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WWAssignments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="WWAssignments.xss">
+      <DependentUpon>WWAssignments.xsd</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Image\action_home.png" />
+    <Content Include="Image\clipboard.png" />
+    <Content Include="Image\DraftingImage.jpg" />
+    <Content Include="Image\Gear.jpg" />
+    <Content Include="Image\mtclogomod.png" />
+    <Content Include="Image\MTC_Official_Logo_2015_CMYK_hires26x16.ico" />
+    <Content Include="scripts\ai.0.22.19-build00125.js" />
+    <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="style\main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCompositeStatusReport.aspx.cs">
+      <DependentUpon>AdminCompositeStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCompositeStatusReport.aspx.designer.cs">
+      <DependentUpon>AdminCompositeStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDefault.aspx.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDefault.aspx.designer.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AJ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AJAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AJAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BRAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BWAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BWAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ECR.Master.cs">
+      <DependentUpon>ECR.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ECR.Master.designer.cs">
+      <DependentUpon>ECR.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ECRDefault.aspx.cs">
+      <DependentUpon>ECRDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ECRDefault.aspx.designer.cs">
+      <DependentUpon>ECRDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JRAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JRAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JTAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JTAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LWAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LWAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RAAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RAAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RCAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RGAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RGAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RWAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RWAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015City.aspx.cs">
+      <DependentUpon>SearchEngineAfter2015City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015City.aspx.designer.cs">
+      <DependentUpon>SearchEngineAfter2015City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015MTC.aspx.cs">
+      <DependentUpon>SearchEngineAfter2015MTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015MTC.aspx.designer.cs">
+      <DependentUpon>SearchEngineAfter2015MTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015Equipment.aspx.cs">
+      <DependentUpon>SearchEngineAfter2015Equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015Equipment.aspx.designer.cs">
+      <DependentUpon>SearchEngineAfter2015Equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015MTC.aspx.cs">
+      <DependentUpon>SearchEngineBefore2015MTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015MTC.aspx.designer.cs">
+      <DependentUpon>SearchEngineBefore2015MTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015Company.aspx.cs">
+      <DependentUpon>SearchEngineBefore2015Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015Company.aspx.designer.cs">
+      <DependentUpon>SearchEngineBefore2015Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015Equipment.aspx.cs">
+      <DependentUpon>SearchEngineBefore2015Equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015Equipment.aspx.designer.cs">
+      <DependentUpon>SearchEngineBefore2015Equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015Company.aspx.cs">
+      <DependentUpon>SearchEngineAfter2015Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015Company.aspx.designer.cs">
+      <DependentUpon>SearchEngineAfter2015Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015City.aspx.cs">
+      <DependentUpon>SearchEngineBefore2015City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015City.aspx.designer.cs">
+      <DependentUpon>SearchEngineBefore2015City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COSR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COSR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director.Master.cs">
+      <DependentUpon>Director.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director.Master.designer.cs">
+      <DependentUpon>Director.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAdjustLeadTimes.aspx.cs">
+      <DependentUpon>DirectorAdjustLeadTimes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAdjustLeadTimes.aspx.designer.cs">
+      <DependentUpon>DirectorAdjustLeadTimes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorDefault.aspx.cs">
+      <DependentUpon>DirectorDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorDefault.aspx.designer.cs">
+      <DependentUpon>DirectorDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorPersonnelReport.aspx.cs">
+      <DependentUpon>DirectorPersonnelReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorPersonnelReport.aspx.designer.cs">
+      <DependentUpon>DirectorPersonnelReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Drafter.Master.cs">
+      <DependentUpon>Drafter.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Drafter.Master.designer.cs">
+      <DependentUpon>Drafter.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterBW.aspx.cs">
+      <DependentUpon>DrafterBW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterBW.aspx.designer.cs">
+      <DependentUpon>DrafterBW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterControl.aspx.cs">
+      <DependentUpon>DrafterControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterControl.aspx.designer.cs">
+      <DependentUpon>DrafterControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterDefault.aspx.cs">
+      <DependentUpon>DrafterDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterDefault.aspx.designer.cs">
+      <DependentUpon>DrafterDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterHC.aspx.cs">
+      <DependentUpon>DrafterHC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterHC.aspx.designer.cs">
+      <DependentUpon>DrafterHC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterJR.aspx.cs">
+      <DependentUpon>DrafterJR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterJR.aspx.designer.cs">
+      <DependentUpon>DrafterJR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterJT.aspx.cs">
+      <DependentUpon>DrafterJT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterJT.aspx.designer.cs">
+      <DependentUpon>DrafterJT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterLW.aspx.cs">
+      <DependentUpon>DrafterLW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterLW.aspx.designer.cs">
+      <DependentUpon>DrafterLW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterMechanical.aspx.cs">
+      <DependentUpon>DrafterMechanical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterMechanical.aspx.designer.cs">
+      <DependentUpon>DrafterMechanical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterRC.aspx.cs">
+      <DependentUpon>DrafterRC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterRC.aspx.designer.cs">
+      <DependentUpon>DrafterRC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterRW.aspx.cs">
+      <DependentUpon>DrafterRW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterRW.aspx.designer.cs">
+      <DependentUpon>DrafterRW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrafterWW.aspx.cs">
+      <DependentUpon>DrafterWW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrafterWW.aspx.designer.cs">
+      <DependentUpon>DrafterWW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Engineer.Master.cs">
+      <DependentUpon>Engineer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Engineer.Master.designer.cs">
+      <DependentUpon>Engineer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerBR.aspx.cs">
+      <DependentUpon>EngineerBR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerBR.aspx.designer.cs">
+      <DependentUpon>EngineerBR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerControl.aspx.cs">
+      <DependentUpon>EngineerControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerControl.aspx.designer.cs">
+      <DependentUpon>EngineerControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerDefault.aspx.cs">
+      <DependentUpon>EngineerDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerDefault.aspx.designer.cs">
+      <DependentUpon>EngineerDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerMechanical.aspx.cs">
+      <DependentUpon>EngineerMechanical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerMechanical.aspx.designer.cs">
+      <DependentUpon>EngineerMechanical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerRA.aspx.cs">
+      <DependentUpon>EngineerRA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerRA.aspx.designer.cs">
+      <DependentUpon>EngineerRA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerRG.aspx.cs">
+      <DependentUpon>EngineerRG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerRG.aspx.designer.cs">
+      <DependentUpon>EngineerRG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerTL.aspx.cs">
+      <DependentUpon>EngineerTL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineerTL.aspx.designer.cs">
+      <DependentUpon>EngineerTL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GADO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GADO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ITE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ITE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JobTrackerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobTrackerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LW.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="main.master.cs">
+      <DependentUpon>main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.master.designer.cs">
+      <DependentUpon>main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.Master.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager.Master.designer.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MasterItem.aspx.cs">
+      <DependentUpon>MasterItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterItem.aspx.designer.cs">
+      <DependentUpon>MasterItem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RW.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineDefault.aspx.cs">
+      <DependentUpon>SearchEngineDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineDefault.aspx.designer.cs">
+      <DependentUpon>SearchEngineDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngine.Master.cs">
+      <DependentUpon>SearchEngine.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngine.Master.designer.cs">
+      <DependentUpon>SearchEngine.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015SN.aspx.cs">
+      <DependentUpon>SearchEngineAfter2015SN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineAfter2015SN.aspx.designer.cs">
+      <DependentUpon>SearchEngineAfter2015SN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015SN.aspx.cs">
+      <DependentUpon>SearchEngineBefore2015SN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEngineBefore2015SN.aspx.designer.cs">
+      <DependentUpon>SearchEngineBefore2015SN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLAssignments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WTR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WTR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WW.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WWAssignments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WWAssignments.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminDefault.rdlc" />
+    <EmbeddedResource Include="Admin_Composite_Status_Report.rdlc" />
+    <EmbeddedResource Include="Director_Current_Job_Status.rdlc" />
+    <EmbeddedResource Include="DirectorDefault.rdlc" />
+    <EmbeddedResource Include="Director_WorkTime_Report.rdlc" />
+    <EmbeddedResource Include="Engineering_Status_Report.rdlc" />
+    <EmbeddedResource Include="MasterItems.rdlc" />
+    <EmbeddedResource Include="Report_AJ.rdlc" />
+    <EmbeddedResource Include="Report_BR.rdlc" />
+    <EmbeddedResource Include="Report_BW.rdlc" />
+    <EmbeddedResource Include="Report_HC.rdlc" />
+    <EmbeddedResource Include="Report_JR.rdlc" />
+    <EmbeddedResource Include="Report_JT.rdlc" />
+    <EmbeddedResource Include="Report_LW.rdlc" />
+    <EmbeddedResource Include="Report_RA.rdlc" />
+    <EmbeddedResource Include="Report_RC.rdlc" />
+    <EmbeddedResource Include="Report_RG.rdlc" />
+    <EmbeddedResource Include="Report_RW.rdlc" />
+    <EmbeddedResource Include="Report_TL.rdlc" />
+    <EmbeddedResource Include="Report_WW.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image\MTC_Official_Logo_2015_CMYK_hires26x16.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -103,7 +1049,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>32115</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:32115/</IISUrl>
+          <IISUrl>http://localhost:5600/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
