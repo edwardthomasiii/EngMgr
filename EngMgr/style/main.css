@@ -61,6 +61,20 @@
     background-color: white;
     float:left;
 }
+#CustomerLeft{
+     width:30%;
+     height:100%;
+    align-self: center;
+    background-color: white;
+    float:left;
+}
+#CustomerRight {
+    width: 70%;
+    height: 100%;
+    align-self: center;
+    background-color: white;
+    float: left;
+}
 #DrafterContentRight{
      width:90%;
      height:100%;

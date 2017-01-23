@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EngMgr
 {
-    public partial class Manager : System.Web.UI.MasterPage
+    public partial class AdminOrder : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -15,7 +15,9 @@ namespace EngMgr
         }
 
        
-
-       
+        protected void OrderGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OrderFormView.PageIndex = OrderGridView.SelectedIndex;
+        }
     }
 }

@@ -33,7 +33,6 @@
             <asp:Button ID="HomeButton3" runat="server" BackColor="#3366FF" BorderColor="#6699FF" BorderStyle="Outset" BorderWidth="3px" Font-Bold="True" Font-Names="Tahoma" Font-Size="14pt" ForeColor="White" Height="45px" PostBackUrl="~/DirectorDefault.aspx" Text="Director" Width="150px" />
         </div>
         <br />
-    <asp:Button ID="WTRBtn" runat="server" Text="ECR Reports" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Height="30px" Width="300px" TabIndex="5" PostBackUrl="~/ECRDefault.aspx" />
         <br />
          <div id="Content"> 
              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 

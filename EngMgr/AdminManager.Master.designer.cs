@@ -10,7 +10,7 @@
 namespace EngMgr {
     
     
-    public partial class Manager {
+    public partial class AdminManager {
         
         /// <summary>
         /// head control.
@@ -40,40 +40,49 @@ namespace EngMgr {
         protected global::System.Web.UI.WebControls.Button HomeButton;
         
         /// <summary>
-        /// HomeButton0 control.
+        /// HomeButtonAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton0;
+        protected global::System.Web.UI.WebControls.Button HomeButtonAdmin;
         
         /// <summary>
-        /// HomeButton1 control.
+        /// HomeButtonEngineer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton1;
+        protected global::System.Web.UI.WebControls.Button HomeButtonEngineer;
         
         /// <summary>
-        /// HomeButton2 control.
+        /// HomeButtonDrafter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton2;
+        protected global::System.Web.UI.WebControls.Button HomeButtonDrafter;
         
         /// <summary>
-        /// HomeButton3 control.
+        /// HomeButtonDirector control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton3;
+        protected global::System.Web.UI.WebControls.Button HomeButtonDirector;
+        
+        /// <summary>
+        /// form2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
@@ -83,23 +92,5 @@ namespace EngMgr {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
-        /// <summary>
-        /// ContentPlaceHolder2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
-        
-        /// <summary>
-        /// ContentPlaceHolder3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
     }
 }

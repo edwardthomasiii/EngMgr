@@ -10,87 +10,87 @@
 namespace EngMgr {
     
     
-    public partial class Director {
+    public partial class AdminOrder {
         
         /// <summary>
-        /// head control.
+        /// PlaceHolderPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Panel PlaceHolderPanel;
         
         /// <summary>
-        /// form1 control.
+        /// statuspicker control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList statuspicker;
         
         /// <summary>
-        /// HomeButton control.
+        /// Company control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton;
+        protected global::System.Web.UI.WebControls.DropDownList Company;
         
         /// <summary>
-        /// HomeButton0 control.
+        /// COnumberright control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton0;
+        protected global::System.Web.UI.WebControls.TextBox COnumberright;
         
         /// <summary>
-        /// HomeButton1 control.
+        /// CustomerDSSearcher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton1;
+        protected global::System.Web.UI.WebControls.SqlDataSource CustomerDSSearcher;
         
         /// <summary>
-        /// HomeButton2 control.
+        /// OrderGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton2;
+        protected global::System.Web.UI.WebControls.GridView OrderGridView;
         
         /// <summary>
-        /// HomeButton3 control.
+        /// OrderFormView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomeButton3;
+        protected global::System.Web.UI.WebControls.FormView OrderFormView;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// FormSQLDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.SqlDataSource FormSQLDS;
         
         /// <summary>
-        /// ContentPlaceHolder2 control.
+        /// UpdateGridViewSQLDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        protected global::System.Web.UI.WebControls.SqlDataSource UpdateGridViewSQLDS;
     }
 }

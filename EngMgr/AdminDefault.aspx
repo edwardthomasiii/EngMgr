@@ -14,7 +14,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <strong>
-<asp:Button ID="New_Orders_Btn" runat="server" BorderColor="#B6DFED" BorderStyle="Outset" BorderWidth="5px" CssClass="auto-style3" Font-Bold="True" Font-Names="Tahoma" Font-Size="Medium" Height="50px" Text="New/Edit Orders" Width="200px" />
+<asp:Button ID="New_Orders_Btn" runat="server" BorderColor="#B6DFED" BorderStyle="Outset" BorderWidth="5px" CssClass="auto-style3" Font-Bold="True" Font-Names="Tahoma" Font-Size="Medium" Height="50px" Text="New/Edit Orders" Width="200px" PostBackUrl="~/AdminNewOrder.aspx" />
 </strong>&nbsp;&nbsp;&nbsp; <strong>
 <asp:Button ID="Orders_Grid_View_Btn" runat="server" BorderColor="#B6DFED" BorderStyle="Outset" BorderWidth="5px" CssClass="auto-style3" Font-Bold="True" Font-Names="Tahoma" Font-Size="Medium" Height="50px" Text="Orders Grid View" Width="200px" />
 </strong>&nbsp;&nbsp;&nbsp; <strong>

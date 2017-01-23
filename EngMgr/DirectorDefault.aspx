@@ -34,6 +34,8 @@
     <asp:Button ID="PRBtn" runat="server" Text="Personnel Report" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Height="30px" Width="300px" PostBackUrl="~/DirectorPersonnelReport.aspx" TabIndex="6" />
     &nbsp;&nbsp;&nbsp;
     <asp:Button ID="ALTBtn" runat="server" Text="Adjust Lead Times" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Height="30px" Width="300px" PostBackUrl="~/DirectorAdjustLeadTimes.aspx" TabIndex="7" />
+    &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="WTRBtn0" runat="server" Text="ECR Reports" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" Height="30px" Width="300px" TabIndex="5" PostBackUrl="~/ECRDefault.aspx" />
     </p>
     <rsweb:ReportViewer ID="DirectorReportViewer" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="100%"  Visible="False" Height="1500px" PageCountMode="Actual" ToolBarItemBorderStyle="Outset">
         <LocalReport ReportPath="Current_Job_Status.rdlc">
